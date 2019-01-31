@@ -177,7 +177,7 @@ Parameter | Description | Required | Default
 **`host`** | URL of SwaggerHub API | false | `api.swaggerhub.com`
 **`protocol`** | Protocol for SwaggerHub API,`http` or `https` | false | `https`
 **`port`** | Port to access SwaggerHub API| false | `443`
-**`definitionFileDir`** | Directory containing definitions to be uploaded. Relative to the project base dir| false | -
+**`definitionFileDir`** | Directory containing definitions to be uploaded. Relative to the project base dir| false | `src/main/resources/api-definitions`
 **`definitionFileRegex`** | Regex pattern used to identify definitions to be uploaded| false | -
  
 

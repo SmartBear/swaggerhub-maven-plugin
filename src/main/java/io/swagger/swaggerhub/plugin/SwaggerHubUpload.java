@@ -37,7 +37,7 @@ public class SwaggerHubUpload extends AbstractMojo {
     private String inputFile;
     @Parameter(property = "upload.isPrivate", defaultValue = "false")
     private Boolean isPrivate;
-    @Parameter(property = "upload.definitionFileDir")
+    @Parameter(property = "upload.definitionFileDir", defaultValue = "src/main/resources/api-definitions")
     private String definitionFileDir;
     @Parameter(property = "upload.definitionFileRegex")
     private String definitionFileRegex;
