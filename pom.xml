@@ -2,9 +2,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>5</version>
+        <groupId>com.smartbear.swaggerhub</groupId>
+        <artifactId>superpom</artifactId>
+        <version>1.0.4</version>
     </parent>
 
     <groupId>io.swagger</groupId>
@@ -15,13 +15,6 @@
     <description>A maven plugin for downloading and uploading Swagger/OAS definitions from/to SwaggerHub as
         part of a build process.
     </description>
-    <url>https://github.com/swagger-api/swaggerhub-maven-plugin</url>
-
-    <scm>
-        <connection>scm:git:git://github.com:swagger-api/swaggerhub-maven-plugin.git</connection>
-        <developerConnection>scm:git:ssh://github.com:swagger-api/swaggerhub-maven-plugin.git</developerConnection>
-        <url>https://github.com/swagger-api/swaggerhub-maven-plugin/tree/master</url>
-    </scm>
 
     <licenses>
         <license>
