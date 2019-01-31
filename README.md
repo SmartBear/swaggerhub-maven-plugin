@@ -142,6 +142,28 @@ Parameter | Description | Required | Default
     </plugin>
 ```
 
+### Example usage when using uploading multiple definitions from a directory with a regex pattern
+
+```xml
+    <plugin>
+        <groupId>io.swagger</groupId>
+        <artifactId>swaggerhub-maven-plugin</artifactId>
+        <executions>
+            <execution>
+                <phase>deploy</phase>
+                <goals>
+                    <goal>upload</goal>
+                </goals>
+                <configuration>
+                    <definitionFileDir>src/main/resources/apiDefinitions</definitionFileDir>
+                    <definitionFileRegex>*-api.yaml</definitionFileRegex>
+                    <token>${SWAGGERHUB_APIKEY}</token>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
+```
+
 #### Parameters
 Parameter | Description | Required | Default
 --------- | ----------- | --------- | -------
@@ -155,7 +177,8 @@ Parameter | Description | Required | Default
 **`host`** | URL of SwaggerHub API | false | `api.swaggerhub.com`
 **`protocol`** | Protocol for SwaggerHub API,`http` or `https` | false | `https`
 **`port`** | Port to access SwaggerHub API| false | `443`
-
+**`definitionFileDir`** | Directory containing definitions to be uploaded. Relative to the project base dir| false | -
+**`definitionFileRegex`** | Regex pattern used to identify definitions to be uploaded| false | -
  
 
 

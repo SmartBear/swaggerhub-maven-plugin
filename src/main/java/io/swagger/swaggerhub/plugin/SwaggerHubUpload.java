@@ -37,6 +37,10 @@ public class SwaggerHubUpload extends AbstractMojo {
     private String inputFile;
     @Parameter(property = "upload.isPrivate", defaultValue = "false")
     private Boolean isPrivate;
+    @Parameter(property = "upload.definitionFileDir")
+    private String definitionFileDir;
+    @Parameter(property = "upload.definitionFileRegex")
+    private String definitionFileRegex;
 
     private SwaggerHubClient swaggerHubClient;
 
@@ -49,7 +53,9 @@ public class SwaggerHubUpload extends AbstractMojo {
                 + ", version: " + version
                 + ", inputFile: " + inputFile
                 + ", format: " + format
-                + ", isPrivate: " + isPrivate);
+                + ", isPrivate: " + isPrivate
+                + ", definitionFileDir: " + definitionFileDir
+                + ", definitionFileRegex: " + definitionFileRegex);
 
         try {
             String content = new String(Files.readAllBytes(Paths.get(inputFile)), Charset.forName("UTF-8"));
